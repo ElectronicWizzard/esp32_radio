@@ -19,8 +19,9 @@ module.exports = {
   "transpileDependencies": [
     "vuetify"
   ],
+  //https://cli.vuejs.org/guide/deployment.html#github-pages
   publicPath: process.env.NODE_ENV === 'production'
-  ? '/esp32_radio/vue-radio/dist/'
+  ? '/'
   : '/',
 
 }
