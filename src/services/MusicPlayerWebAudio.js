@@ -39,10 +39,12 @@ export default class MusicPlayer {
         try {
             var result = await this.setup();
             if (result){
-                MusicPlayer.audio = new Audio(url);
+                /*MusicPlayer.audio = new Audio(url);
                 await MusicPlayer.audio.play();
                 MusicPlayer.isPlaying = true
-                console.info("MusicPlayer -> OK")
+                console.info("MusicPlayer -> OK")*/
+                console.info("MusicPlayer -> OK");
+                this.service.postStreaming(true,url);
                 return  {url : url, playing:true }  
             } else {
                 return  {url : url, playing:false }  
