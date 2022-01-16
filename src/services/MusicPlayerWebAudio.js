@@ -54,10 +54,12 @@ export default class MusicPlayer {
     }
 
     async setup() {
+        console.log("setup")
         if (store.state.esp32){
-            // make sure that bleutooth is active on esp32
-            var response = await this.service.postBluetooth(true);
-            return response.data.bluetooth 
+            // make sure that bluetooth is active on esp32
+            //var response = await this.service.postBluetooth(true);
+            //return response.data.bluetooth 
+            return true;
         } else {
             return true;
         }

@@ -53,6 +53,7 @@ export default class WebService {
     }
     
     async postBluetooth(active) {
+        console.log("postBluetooth");
         var action = active ? "start" : "stop"
         return await axios.post('/service/bluetooth/'+action)
     }
